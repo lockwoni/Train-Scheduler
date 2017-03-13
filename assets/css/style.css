@@ -1,3 +1,7 @@
+html, body {
+	background: url('../images/cork-wallet.png');
+}
+
 /*footer*/
 .footer {
 	padding: 30px 0;

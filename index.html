@@ -2,14 +2,74 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Train Scheduler</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/solar/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">	
 </head>
 <body>
 	<div class="container">
+		<div class="jumbotron">
+		  <h1>Anytime is Train Time</h1>
+		  <p>Choo choo. Chee chee.</p>
+		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Current Train Schedule</h3>
+		  </div>
+		  <div class="panel-body">
+		    <table class="table table-striped table-hover ">
+  				<thead>
+				    <tr>
+				      <th>Train Name</th>
+				      <th>Destination</th>
+				      <th>Frequency (min)</th>
+				      <th>Next Arrival</th>
+				      <th>Minutes Away</th>
+				    </tr>
+				  </thead>
+
+				  <tbody>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Add Train</h3>
+		  </div>
+		  <div class="panel-body">
+		    <form>
+		    	<div class="form-group">
+					  <label class="control-label" for="inputDefault">Train Name</label>
+					  <input type="text" class="form-control" id="inputDefault">
+					</div>
+
+					<div class="form-group">
+					  <label class="control-label" for="inputDefault">Destination</label>
+					  <input type="text" class="form-control" id="inputDefault">
+					</div>
+
+					<div class="form-group">
+					  <label class="control-label" for="inputDefault">First Train Time (HH:mm - military time)</label>
+					  <input type="text" class="form-control" id="inputDefault">
+					</div>
+
+					<div class="form-group">
+					  <label class="control-label" for="inputDefault">Frequency</label>
+					  <input type="text" class="form-control" id="inputDefault">
+					</div>
+
+					<div class="form-group">
+			      <button type="submit" class="btn btn-primary">Submit</button>
+    			</div>
+		    </form>
+		  </div>
+		</div>
 	</div>
 
 	<footer class="footer">
