@@ -19,7 +19,7 @@ var config = {
 
 firebase.initializeApp(config);
 
-/**Create a variable to reference the database**/
+/**Creating a variable to reference the database**/
 var database = firebase.database();
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -76,19 +76,19 @@ function trainTable() {
   	console.log("First: " + firstTime);
   	console.log(convertedFirstTime);
 
-  	///// Difference between current time & first train
+  	// Calculating the difference between current time & first train
   	var diffTime = moment().diff(moment(convertedFirstTime), "minutes");
   	console.log("Difference in Time: " + diffTime);
 
-  	///// Time apart (remainder)
+  	///// Calculating time apart (remainder)
   	var tRemainder = diffTime % frequency;
   	console.log(tRemainder);
 
-  	///// Minutes until the train
+  	///// Calculating minutes until the train
   	var minAway = frequency - tRemainder;
   	console.log("Minutes to train: " + minAway);
 
-  	///// Next train
+  	///// Calculating the next train time
   	var nextTrain = moment().add(minAway, "minutes");
   	console.log("Arrival time: " + moment(nextTrain).format("HH:mm"));
 
