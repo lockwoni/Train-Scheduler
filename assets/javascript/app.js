@@ -1,13 +1,14 @@
 //SETUP VARIABLES
 /**Current time**/
-
 var currentTime = moment().format('HH:mm');
+
+/**Defining variables that will be used later**/
 var trainName = "";
 var dest = "";
 var firstTime = "";
 var frequency = 0;
 
-/**Initialize Firebase**/
+/**Initializing Firebase**/
 var config = {
   apiKey: "AIzaSyCkuNzN_b_J1x-6griN-Vjn4qmVS8p6aX8",
   authDomain: "train-scheduler-76bec.firebaseapp.com",
