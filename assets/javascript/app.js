@@ -62,7 +62,7 @@ function submitForm() {
 
 /**Function for adding data in Firebase to the webpage**/
 function trainTable() {
-	database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+	database.ref().on("child_added", function(snapshot) {
 		console.log(childSnapshot.val());
 
 		// Storing everything into a variable
@@ -103,4 +103,5 @@ $(document).ready(function() {
  	submitForm();
  	trainTable();
  	console.log("Time: " + currentTime);
+ 	 $on('loaded').$("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + dest + "</td><td>" + frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + minAway + "</td></tr>");
  });
