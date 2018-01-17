@@ -103,5 +103,5 @@ $(document).ready(function() {
  	submitForm();
  	trainTable();
  	console.log("Time: " + currentTime);
- 	 $on("loaded").$("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + dest + "</td><td>" + frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + minAway + "</td></tr>");
+ 	$on("loaded").$("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + dest + "</td><td>" + frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + minAway + "</td></tr>");
  });
