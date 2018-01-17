@@ -1,6 +1,6 @@
 //SETUP VARIABLES
 /**Current time**/
-var currentTime = moment().format('HH:mm');
+var currentTime = moment().format("HH:mm");
 
 /**Defining variables that will be used later**/
 var trainName = "";
@@ -14,7 +14,7 @@ var config = {
   authDomain: "train-scheduler-76bec.firebaseapp.com",
   databaseURL: "https://train-scheduler-76bec.firebaseio.com",
   storageBucket: "train-scheduler-76bec.appspot.com",
-  messagingSenderId: "682548763881"
+  messagingSenderId: "682548763881",
 };
 
 firebase.initializeApp(config);
@@ -62,7 +62,7 @@ function submitForm() {
 
 /**Function for adding data in Firebase to the webpage**/
 function trainTable() {
-	database.ref().on("child_added", function(snapshot) {
+	database.ref().on("child_added", function(childSnapshot) {
 		console.log(childSnapshot.val());
 
 		// Storing everything into a variable
@@ -103,5 +103,5 @@ $(document).ready(function() {
  	submitForm();
  	trainTable();
  	console.log("Time: " + currentTime);
- 	 $on('loaded').$("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + dest + "</td><td>" + frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + minAway + "</td></tr>");
+ 	 $on("loaded").$("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + dest + "</td><td>" + frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + minAway + "</td></tr>");
  });
